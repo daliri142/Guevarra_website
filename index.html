@@ -130,51 +130,44 @@
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
-  animation: fadeIn 0.5s ease-out 0.4s forwards;
-  opacity: 0;
-  animation-fill-mode: forwards; 
+  opacity: 1; /* Ensuring visibility */
 }
-    
-    @media (min-width: 1024px) {
-      .buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+
+@media (min-width: 1024px) {
+  .buttons {
+    justify-content: flex-start; /* Ensuring correct alignment */
+  }
 }
-    }
-    
-    .btn-primary {
-      position: relative;
-      overflow: hidden;
-      padding: 0.75rem 1.5rem;
-      border-radius: 9999px;
-      background-color: var(--primary);
-      color: white;
-      font-weight: 500;
-      transition: all 0.3s;
-      text-decoration: none;
-      display: inline-block;
-    }
-    
-    .btn-primary:hover {
-      background-color: rgba(59, 130, 246, 0.9);
-    }
-    
-    .btn-secondary {
-      padding: 0.75rem 1.5rem;
-      border-radius: 9999px;
-      border: 1px solid rgba(59, 130, 246, 0.3);
-      color: var(--primary);
-      font-weight: 500;
-      transition: all 0.3s;
-      text-decoration: none;
-      display: inline-block;
-    }
-    
-    .btn-secondary:hover {
-      background-color: rgba(59, 130, 246, 0.05);
-    }
+
+.btn-primary,
+.btn-secondary {
+  position: relative;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer; /* Ensuring buttons behave correctly */
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: rgba(59, 130, 246, 0.9);
+}
+
+.btn-secondary {
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: var(--primary);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(59, 130, 246, 0.05);
+}
     
     .image-container {
       width: 100%;
@@ -360,9 +353,9 @@
           I'm a student at San Beda College Alabang, currently in 10-ICT-B. Passionate about technology and always eager to learn, I enjoy exploring new ideas, working on creative projects, and honing my skills in ICT.
         </p>
         <div class="buttons">
-          <a href="#" class="btn-primary">Download CV</a>
-          <a href="#" class="btn-secondary">Contact Me</a>
-        </div>
+  <a href="#" class="btn-primary">Download CV</a>
+  <a href="mailto:your-email@example.com" class="btn-secondary">Contact Me</a>
+</div>
       </div>
       <div class="image-container">
         <div class="profile-image">
