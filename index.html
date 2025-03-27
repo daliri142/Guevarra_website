@@ -126,18 +126,22 @@
     }
     
     .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-      animation: fadeIn 0.5s ease-out 0.4s forwards;
-      opacity: 0;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-out 0.4s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards; 
+}
     
     @media (min-width: 1024px) {
       .buttons {
-        justify-content: flex-start;
-      }
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
     }
     
     .btn-primary {
