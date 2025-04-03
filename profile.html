@@ -47,23 +47,252 @@
   </nav>
 
   <!-- Main Content - Profile Page -->
-  <main class="pt-16">
-    <div class="container mx-auto px-4 py-12">
-      <div class="max-w-4xl mx-auto">
+  <main class="pt-20">
+    <div class="container mx-auto px-4 py-8">
+      <!-- About Me Section -->
+      <section class="mb-16">
         <div class="section-title text-center md:text-left">
-          <h2>Profile</h2>
+          <h2>About Me</h2>
         </div>
         
         <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
-          <p class="text-gray-600 mb-4">
-            This is the Profile page. You can add your personal information, education details, 
-            skills, and other relevant information about yourself here.
-          </p>
-          <div class="h-64 flex items-center justify-center bg-gray-100 rounded-md">
-            <p class="text-gray-500">Profile content coming soon...</p>
+          <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
+            <!-- Profile Image -->
+            <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-blue-100 shadow-md flex-shrink-0">
+              <img src="prof.jpg" 
+                alt="Eril Casey M. Guevarra" 
+                class="w-full h-full object-cover" />
+            </div>
+            
+            <!-- About Me Text -->
+            <div>
+              <h3 class="text-2xl font-semibold text-gray-800 mb-3">Eril Casey M. Guevarra</h3>
+              <p class="text-gray-600 mb-4 italic">Student at San Beda College Alabang</p>
+              <div class="space-y-4">
+                <p class="text-gray-700">
+                  Hello! I'm Eril Casey, a dedicated student at San Beda College Alabang. I have a passion for technology and continuous learning. My journey in the world of ICT has been filled with exciting challenges and opportunities for growth.
+                </p>
+                <p class="text-gray-700">
+                  I believe in the power of innovation and creative problem-solving. My goal is to develop skills that will allow me to make meaningful contributions to the tech industry in the future. When I'm not studying, you can find me exploring new technologies, working on personal projects, or enjoying my various hobbies.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
+      
+      <!-- Education Section -->
+      <section class="mb-16">
+        <div class="section-title text-center md:text-left">
+          <h2>Education</h2>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+          <div class="space-y-8">
+            <!-- Current Education -->
+            <div class="flex flex-col md:flex-row">
+              <div class="md:w-1/4 mb-4 md:mb-0">
+                <div class="bg-blue-50 rounded-lg p-4 text-center md:text-left">
+                  <p class="text-blue-800 font-semibold">2020 - Present</p>
+                </div>
+              </div>
+              <div class="md:w-3/4 md:pl-6">
+                <h3 class="text-xl font-semibold text-gray-800">San Beda College Alabang</h3>
+                <p class="text-gray-600 mb-2">10-ICT-B</p>
+                <p class="text-gray-700">
+                  Currently enrolled in the Information and Communications Technology track, focusing on developing technical skills and knowledge in various computing disciplines.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Previous Education (sample) -->
+            <div class="flex flex-col md:flex-row">
+              <div class="md:w-1/4 mb-4 md:mb-0">
+                <div class="bg-blue-50 rounded-lg p-4 text-center md:text-left">
+                  <p class="text-blue-800 font-semibold">2014 - 2020</p>
+                </div>
+              </div>
+              <div class="md:w-3/4 md:pl-6">
+                <h3 class="text-xl font-semibold text-gray-800">Elementary Education</h3>
+                <p class="text-gray-600 mb-2">ABC Elementary School</p>
+                <p class="text-gray-700">
+                  Completed elementary education with honors, participating in various academic competitions and extracurricular activities.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Experience Section -->
+      <section class="mb-16">
+        <div class="section-title text-center md:text-left">
+          <h2>Experience</h2>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+          <div class="space-y-8">
+            <!-- Experience Item 1 -->
+            <div class="flex flex-col md:flex-row">
+              <div class="md:w-1/4 mb-4 md:mb-0">
+                <div class="bg-blue-50 rounded-lg p-4 text-center md:text-left">
+                  <p class="text-blue-800 font-semibold">2023</p>
+                </div>
+              </div>
+              <div class="md:w-3/4 md:pl-6">
+                <h3 class="text-xl font-semibold text-gray-800">School Tech Club</h3>
+                <p class="text-gray-600 mb-2">Project Lead</p>
+                <p class="text-gray-700">
+                  Led a team of fellow students in developing a school event management application. Coordinated tasks, managed timelines, and presented the final project to faculty and peers.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Experience Item 2 -->
+            <div class="flex flex-col md:flex-row">
+              <div class="md:w-1/4 mb-4 md:mb-0">
+                <div class="bg-blue-50 rounded-lg p-4 text-center md:text-left">
+                  <p class="text-blue-800 font-semibold">2022</p>
+                </div>
+              </div>
+              <div class="md:w-3/4 md:pl-6">
+                <h3 class="text-xl font-semibold text-gray-800">Web Development Workshop</h3>
+                <p class="text-gray-600 mb-2">Participant</p>
+                <p class="text-gray-700">
+                  Participated in a 2-month intensive web development workshop focusing on HTML, CSS, and basic JavaScript. Created a personal portfolio website as the final project.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Skills Section -->
+      <section class="mb-16">
+        <div class="section-title text-center md:text-left">
+          <h2>Skills</h2>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Technical Skills -->
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-4">Technical Skills</h3>
+              <div class="space-y-4">
+                <!-- Skill with progress bar -->
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span class="text-gray-700 font-medium">HTML & CSS</span>
+                    <span class="text-blue-600 font-medium">80%</span>
+                  </div>
+                  <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div class="bg-blue-500 h-2.5 rounded-full" style="width: 80%"></div>
+                  </div>
+                </div>
+                
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span class="text-gray-700 font-medium">JavaScript</span>
+                    <span class="text-blue-600 font-medium">65%</span>
+                  </div>
+                  <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div class="bg-blue-500 h-2.5 rounded-full" style="width: 65%"></div>
+                  </div>
+                </div>
+                
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span class="text-gray-700 font-medium">Python</span>
+                    <span class="text-blue-600 font-medium">70%</span>
+                  </div>
+                  <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div class="bg-blue-500 h-2.5 rounded-full" style="width: 70%"></div>
+                  </div>
+                </div>
+                
+                <div>
+                  <div class="flex justify-between mb-1">
+                    <span class="text-gray-700 font-medium">Photoshop</span>
+                    <span class="text-blue-600 font-medium">75%</span>
+                  </div>
+                  <div class="w-full bg-gray-200 rounded-full h-2.5">
+                    <div class="bg-blue-500 h-2.5 rounded-full" style="width: 75%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Soft Skills -->
+            <div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-4">Soft Skills</h3>
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  Team Collaboration
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  Problem Solving
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  Communication
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  Time Management
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  Critical Thinking
+                </li>
+                <li class="flex items-center">
+                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                  Adaptability
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Edit Profile Picture Section (for demo purposes) -->
+      <section class="mb-16">
+        <div class="section-title text-center md:text-left">
+          <h2>Change Profile Picture</h2>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-6 md:p-8 text-center">
+          <p class="text-gray-600 mb-4">
+            Click on any image below to set it as your profile picture:
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+            <div class="cursor-pointer hover:opacity-80 transition-opacity" onclick="changeProfilePic('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                alt="Profile option 1" 
+                class="rounded-lg shadow-sm w-full h-32 object-cover" />
+            </div>
+            <div class="cursor-pointer hover:opacity-80 transition-opacity" onclick="changeProfilePic('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+              <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Profile option 2" 
+                class="rounded-lg shadow-sm w-full h-32 object-cover" />
+            </div>
+            <div class="cursor-pointer hover:opacity-80 transition-opacity" onclick="changeProfilePic('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Profile option 3" 
+                class="rounded-lg shadow-sm w-full h-32 object-cover" />
+            </div>
+            <div class="cursor-pointer hover:opacity-80 transition-opacity" onclick="changeProfilePic('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Profile option 4" 
+                class="rounded-lg shadow-sm w-full h-32 object-cover" />
+            </div>
+          </div>
+          <p class="text-sm text-gray-500 mt-3">
+            Note: This is a demo feature for the static HTML page. In a real application, you would upload your own image.
+          </p>
+        </div>
+      </section>
     </div>
   </main>
 
@@ -80,6 +309,22 @@
         this.innerHTML = '<i class="fas fa-bars text-xl"></i>';
       }
     });
+    
+    // Function to change profile picture
+    function changeProfilePic(imageSrc) {
+      document.getElementById('profile-image').src = imageSrc;
+      
+      // Optional: Show a notification that the image was changed
+      const notification = document.createElement('div');
+      notification.className = 'fixed top-24 right-4 bg-green-500 text-white px-4 py-2 rounded shadow-lg animate-fade-in';
+      notification.innerHTML = 'Profile picture updated!';
+      document.body.appendChild(notification);
+      
+      // Remove notification after 3 seconds
+      setTimeout(() => {
+        notification.remove();
+      }, 3000);
+    }
   </script>
 </body>
 </html>
