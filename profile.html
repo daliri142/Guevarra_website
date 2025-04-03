@@ -7,20 +7,24 @@
   <title>Profile - Eril Casey M. Guevarra</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gray-50 min-h-screen">
+<body>
   <!-- Navbar -->
-  <nav class="fixed top-0 w-full bg-white shadow-md z-50">
-    <div class="container mx-auto px-4 py-4">
+  <nav class="fixed top-0 w-full bg-white shadow-md z-50 transition-all duration-300">
+    <div class="container mx-auto px-6 py-4">
       <div class="flex justify-between items-center">
-        <div class="text-2xl font-bold text-gray-800">
-          <a href="index.html">ECG</a>
+        <div class="text-2xl font-bold text-gray-800 relative">
+          <a href="index.html" class="group">
+            EMG
+            <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+          </a>
         </div>
         
         <!-- Mobile menu button -->
         <div class="md:hidden">
-          <button id="menuToggle" class="text-blue-500">
+          <button id="menuToggle" class="text-blue-500 p-1 rounded-md hover:bg-blue-50 transition-colors">
             <i class="fas fa-bars text-xl"></i>
           </button>
         </div>
@@ -36,11 +40,11 @@
       
       <!-- Mobile menu -->
       <div id="mobileMenu" class="md:hidden hidden pt-4 pb-2">
-        <div class="flex flex-col space-y-4">
-          <a href="index.html" class="nav-link">Home</a>
-          <a href="profile.html" class="nav-link active">Profile</a>
-          <a href="hobbies.html" class="nav-link">Hobbies</a>
-          <a href="contact.html" class="nav-link">Contact</a>
+        <div class="flex flex-col space-y-4 border-t border-gray-100 pt-4">
+          <a href="index.html" class="nav-link px-2 py-1 rounded hover:bg-blue-50">Home</a>
+          <a href="profile.html" class="nav-link active px-2 py-1 rounded hover:bg-blue-50">Profile</a>
+          <a href="hobbies.html" class="nav-link px-2 py-1 rounded hover:bg-blue-50">Hobbies</a>
+          <a href="contact.html" class="nav-link px-2 py-1 rounded hover:bg-blue-50">Contact</a>
         </div>
       </div>
     </div>
@@ -48,9 +52,9 @@
 
   <!-- Main Content - Profile Page -->
   <main class="pt-20">
-    <div class="container mx-auto px-4 py-8">
+    <div class="container mx-auto px-6 py-8">
       <!-- About Me Section -->
-      <section class="mb-16">
+      <section class="mb-16 animate-fade-in" style="animation-delay: 100ms">
         <div class="section-title text-center md:text-left">
           <h2>About Me</h2>
         </div>
@@ -58,8 +62,8 @@
         <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
           <div class="flex flex-col md:flex-row items-center md:items-start gap-8">
             <!-- Profile Image -->
-            <div class="w-48 h-48 rounded-full overflow-hidden border-4 border-blue-100 shadow-md flex-shrink-0">
-              <img src="prof.jpg" 
+            <div class="w-48 h-48 rounded-full overflow-hidden flex-shrink-0">
+              <img id="profile-image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                 alt="Eril Casey M. Guevarra" 
                 class="w-full h-full object-cover" />
             </div>
@@ -69,10 +73,10 @@
               <h3 class="text-2xl font-semibold text-gray-800 mb-3">Eril Casey M. Guevarra</h3>
               <p class="text-gray-600 mb-4 italic">Student at San Beda College Alabang</p>
               <div class="space-y-4">
-                <p class="text-gray-700">
+                <p class="text-gray-700 leading-relaxed">
                   Hello! I'm Eril Casey, a dedicated student at San Beda College Alabang. I have a passion for technology and continuous learning. My journey in the world of ICT has been filled with exciting challenges and opportunities for growth.
                 </p>
-                <p class="text-gray-700">
+                <p class="text-gray-700 leading-relaxed">
                   I believe in the power of innovation and creative problem-solving. My goal is to develop skills that will allow me to make meaningful contributions to the tech industry in the future. When I'm not studying, you can find me exploring new technologies, working on personal projects, or enjoying my various hobbies.
                 </p>
               </div>
@@ -82,7 +86,7 @@
       </section>
       
       <!-- Education Section -->
-      <section class="mb-16">
+      <section class="mb-16 animate-fade-in" style="animation-delay: 200ms">
         <div class="section-title text-center md:text-left">
           <h2>Education</h2>
         </div>
@@ -90,33 +94,23 @@
         <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
           <div class="space-y-8">
             <!-- Current Education -->
-            <div class="flex flex-col md:flex-row">
-              <div class="md:w-1/4 mb-4 md:mb-0">
-                <div class="bg-blue-50 rounded-lg p-4 text-center md:text-left">
-                  <p class="text-blue-800 font-semibold">2020 - Present</p>
-                </div>
-              </div>
-              <div class="md:w-3/4 md:pl-6">
+            <div class="timeline-item pb-6">
+              <div class="md:ml-8">
                 <h3 class="text-xl font-semibold text-gray-800">San Beda College Alabang</h3>
-                <p class="text-gray-600 mb-2">10-ICT-B</p>
-                <p class="text-gray-700">
-                  Currently enrolled in the Information and Communications Technology track, focusing on developing technical skills and knowledge in various computing disciplines.
+                <p class="text-blue-600 font-medium mb-2">2020 - Present | 10-ICT-B</p>
+                <p class="text-gray-700 leading-relaxed">
+                  Currently enrolled in the Information and Communications Technology track, focusing on developing technical skills and knowledge in various computing disciplines. Taking courses in web development, programming fundamentals, and digital media.
                 </p>
               </div>
             </div>
             
             <!-- Previous Education (sample) -->
-            <div class="flex flex-col md:flex-row">
-              <div class="md:w-1/4 mb-4 md:mb-0">
-                <div class="bg-blue-50 rounded-lg p-4 text-center md:text-left">
-                  <p class="text-blue-800 font-semibold">2014 - 2020</p>
-                </div>
-              </div>
-              <div class="md:w-3/4 md:pl-6">
+            <div class="timeline-item">
+              <div class="md:ml-8">
                 <h3 class="text-xl font-semibold text-gray-800">Elementary Education</h3>
-                <p class="text-gray-600 mb-2">ABC Elementary School</p>
-                <p class="text-gray-700">
-                  Completed elementary education with honors, participating in various academic competitions and extracurricular activities.
+                <p class="text-blue-600 font-medium mb-2">2014 - 2020 | ABC Elementary School</p>
+                <p class="text-gray-700 leading-relaxed">
+                  Completed elementary education with honors, participating in various academic competitions and extracurricular activities. Received recognition for excellence in Mathematics and Science subjects.
                 </p>
               </div>
             </div>
@@ -125,7 +119,7 @@
       </section>
       
       <!-- Experience Section -->
-      <section class="mb-16">
+      <section class="mb-16 animate-fade-in" style="animation-delay: 300ms">
         <div class="section-title text-center md:text-left">
           <h2>Experience</h2>
         </div>
@@ -133,33 +127,23 @@
         <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
           <div class="space-y-8">
             <!-- Experience Item 1 -->
-            <div class="flex flex-col md:flex-row">
-              <div class="md:w-1/4 mb-4 md:mb-0">
-                <div class="bg-blue-50 rounded-lg p-4 text-center md:text-left">
-                  <p class="text-blue-800 font-semibold">2023</p>
-                </div>
-              </div>
-              <div class="md:w-3/4 md:pl-6">
+            <div class="timeline-item pb-6">
+              <div class="md:ml-8">
                 <h3 class="text-xl font-semibold text-gray-800">School Tech Club</h3>
-                <p class="text-gray-600 mb-2">Project Lead</p>
-                <p class="text-gray-700">
-                  Led a team of fellow students in developing a school event management application. Coordinated tasks, managed timelines, and presented the final project to faculty and peers.
+                <p class="text-blue-600 font-medium mb-2">2023 | Project Lead</p>
+                <p class="text-gray-700 leading-relaxed">
+                  Led a team of fellow students in developing a school event management application. Coordinated tasks, managed timelines, and presented the final project to faculty and peers. The application helped streamline event registrations and notifications.
                 </p>
               </div>
             </div>
             
             <!-- Experience Item 2 -->
-            <div class="flex flex-col md:flex-row">
-              <div class="md:w-1/4 mb-4 md:mb-0">
-                <div class="bg-blue-50 rounded-lg p-4 text-center md:text-left">
-                  <p class="text-blue-800 font-semibold">2022</p>
-                </div>
-              </div>
-              <div class="md:w-3/4 md:pl-6">
+            <div class="timeline-item">
+              <div class="md:ml-8">
                 <h3 class="text-xl font-semibold text-gray-800">Web Development Workshop</h3>
-                <p class="text-gray-600 mb-2">Participant</p>
-                <p class="text-gray-700">
-                  Participated in a 2-month intensive web development workshop focusing on HTML, CSS, and basic JavaScript. Created a personal portfolio website as the final project.
+                <p class="text-blue-600 font-medium mb-2">2022 | Participant</p>
+                <p class="text-gray-700 leading-relaxed">
+                  Participated in a 2-month intensive web development workshop focusing on HTML, CSS, and basic JavaScript. Created a personal portfolio website as the final project, implementing responsive design principles and modern UI/UX practices.
                 </p>
               </div>
             </div>
@@ -168,7 +152,7 @@
       </section>
       
       <!-- Skills Section -->
-      <section class="mb-16">
+      <section class="mb-16 animate-fade-in" style="animation-delay: 400ms">
         <div class="section-title text-center md:text-left">
           <h2>Skills</h2>
         </div>
@@ -225,42 +209,98 @@
             <!-- Soft Skills -->
             <div>
               <h3 class="text-xl font-semibold text-gray-800 mb-4">Soft Skills</h3>
-              <ul class="space-y-2 text-gray-700">
-                <li class="flex items-center">
-                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                <div class="custom-checkbox checked">
                   Team Collaboration
-                </li>
-                <li class="flex items-center">
-                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                </div>
+                <div class="custom-checkbox checked">
                   Problem Solving
-                </li>
-                <li class="flex items-center">
-                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                </div>
+                <div class="custom-checkbox checked">
                   Communication
-                </li>
-                <li class="flex items-center">
-                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                </div>
+                <div class="custom-checkbox checked">
                   Time Management
-                </li>
-                <li class="flex items-center">
-                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                </div>
+                <div class="custom-checkbox checked">
                   Critical Thinking
-                </li>
-                <li class="flex items-center">
-                  <i class="fas fa-check-circle text-blue-500 mr-2"></i>
+                </div>
+                <div class="custom-checkbox checked">
                   Adaptability
-                </li>
-              </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
       
-  
-          
-          
+      <!-- Edit Profile Picture Section (for demo purposes) -->
+      <section class="mb-16 animate-fade-in" style="animation-delay: 500ms">
+        <div class="section-title text-center md:text-left">
+          <h2>Change Profile Picture</h2>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-6 md:p-8 text-center">
+          <p class="text-gray-600 mb-6">
+            Click on any image below to set it as your profile picture:
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-4">
+            <div class="profile-image-option overflow-hidden" onclick="changeProfilePic('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80')">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                alt="Profile option 1" 
+                class="rounded-lg shadow-sm w-full h-32 object-cover" />
+            </div>
+            <div class="profile-image-option overflow-hidden" onclick="changeProfilePic('https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+              <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Profile option 2" 
+                class="rounded-lg shadow-sm w-full h-32 object-cover" />
+            </div>
+            <div class="profile-image-option overflow-hidden" onclick="changeProfilePic('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+              <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Profile option 3" 
+                class="rounded-lg shadow-sm w-full h-32 object-cover" />
+            </div>
+            <div class="profile-image-option overflow-hidden" onclick="changeProfilePic('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                alt="Profile option 4" 
+                class="rounded-lg shadow-sm w-full h-32 object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-gray-800 text-white">
+    <div class="container mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <h3 class="text-xl font-semibold mb-2">EMG</h3>
+          <p class="text-gray-300 text-sm">Eril Casey M. Guevarra | San Beda College Alabang</p>
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" class="text-gray-300 hover:text-white transition-colors duration-200">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+        </div>
+      </div>
+      <div class="mt-6 border-t border-gray-700 pt-6 text-center text-sm text-gray-300">
+        &copy; <span id="year"></span> Eril Casey M. Guevarra. All rights reserved.
+      </div>
+    </div>
+  </footer>
 
   <script>
+    // Set current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
     // Mobile menu toggle
     document.getElementById('menuToggle').addEventListener('click', function() {
       const mobileMenu = document.getElementById('mobileMenu');
@@ -278,17 +318,53 @@
     function changeProfilePic(imageSrc) {
       document.getElementById('profile-image').src = imageSrc;
       
-      // Optional: Show a notification that the image was changed
+      // Create a notification
       const notification = document.createElement('div');
-      notification.className = 'fixed top-24 right-4 bg-green-500 text-white px-4 py-2 rounded shadow-lg animate-fade-in';
+      notification.className = 'toast-notification';
       notification.innerHTML = 'Profile picture updated!';
       document.body.appendChild(notification);
       
-      // Remove notification after 3 seconds
-      setTimeout(() => {
-        notification.remove();
-      }, 3000);
+      // Remove notification after animation completes
+      notification.addEventListener('animationend', function(e) {
+        if (e.animationName === 'toastOut') {
+          this.remove();
+        }
+      });
     }
+    
+    // Scroll effect for navbar
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('nav');
+      if (window.scrollY > 10) {
+        navbar.classList.add('bg-white/95', 'backdrop-blur-md', 'shadow-md');
+      } else {
+        navbar.classList.remove('bg-white/95', 'backdrop-blur-md', 'shadow-md');
+      }
+    });
+    
+    // Animate skill bars on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const bars = entry.target.querySelectorAll('.bg-blue-500');
+            bars.forEach(bar => {
+              const width = bar.style.width;
+              bar.style.width = '0';
+              setTimeout(() => {
+                bar.style.width = width;
+              }, 100);
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      
+      const skillsSection = document.querySelector('.skills-section');
+      if (skillsSection) {
+        observer.observe(skillsSection);
+      }
+    });
   </script>
 </body>
 </html>
