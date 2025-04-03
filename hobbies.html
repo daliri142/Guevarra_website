@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hobbies - Eril Casey M. Guevarra</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-white shadow-md z-50">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <div class="text-2xl font-bold text-gray-800">
+          <a href="index.html">EMG</a>
+        </div>
+        
+        <!-- Mobile menu button -->
+        <div class="md:hidden">
+          <button id="menuToggle" class="text-blue-500">
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+        </div>
+        
+        <!-- Desktop menu -->
+        <div class="hidden md:flex space-x-8">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="profile.html" class="nav-link">Profile</a>
+          <a href="hobbies.html" class="nav-link active">Hobbies</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+      </div>
+      
+      <!-- Mobile menu -->
+      <div id="mobileMenu" class="md:hidden hidden pt-4 pb-2">
+        <div class="flex flex-col space-y-4">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="profile.html" class="nav-link">Profile</a>
+          <a href="hobbies.html" class="nav-link active">Hobbies</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content - Hobbies Page -->
+  <main class="pt-16">
+    <div class="container mx-auto px-4 py-12">
+      <div class="max-w-4xl mx-auto">
+        <div class="section-title text-center md:text-left">
+          <h2>Hobbies</h2>
+        </div>
+        
+        <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
+          <p class="text-gray-600 mb-4">
+            This is the Hobbies page. You can showcase your interests, activities, 
+            and things you enjoy doing in your free time here.
+          </p>
+          <div class="h-64 flex items-center justify-center bg-gray-100 rounded-md">
+            <p class="text-gray-500">Hobbies content coming soon...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menuToggle').addEventListener('click', function() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('animate-fade-in');
+        this.innerHTML = '<i class="fas fa-times text-xl"></i>';
+      } else {
+        mobileMenu.classList.add('hidden');
+        this.innerHTML = '<i class="fas fa-bars text-xl"></i>';
+      }
+    });
+  </script>
+</body>
+</html>
