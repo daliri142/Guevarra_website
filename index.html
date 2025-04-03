@@ -6,118 +6,7 @@
   <title>Eril Casey M. Guevarra - Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <style>
-    /* Base styles */
-    body {
-      font-family: 'Arial', sans-serif;
-    }
-
-    /* Navigation styles */
-    .nav-link {
-      position: relative;
-      font-weight: 500;
-      font-size: 1.125rem;
-      transition: color 0.2s;
-    }
-
-    .nav-link:hover, .nav-link.active {
-      color: #3B82F6;
-    }
-
-    .nav-link::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -5px;
-      height: 2px;
-      width: 0;
-      background-color: #3B82F6;
-      transition: all 0.3s;
-    }
-
-    .nav-link:hover::after, .nav-link.active::after {
-      width: 100%;
-    }
-
-    /* Social links */
-    .social-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 2.5rem;
-      width: 2.5rem;
-      border-radius: 9999px;
-      background-color: rgba(59, 130, 246, 0.1);
-      color: #3B82F6;
-      transition: all 0.3s;
-    }
-
-    .social-icon:hover {
-      background-color: #3B82F6;
-      color: white;
-    }
-
-    /* Section title styling */
-    .section-title h2 {
-      font-size: 1.875rem;
-      font-weight: 700;
-      position: relative;
-      padding-bottom: 0.75rem;
-      margin-bottom: 2rem;
-      display: inline-block;
-    }
-
-    .section-title h2::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      height: 3px;
-      width: 3.5rem;
-      background-color: #3B82F6;
-    }
-
-    /* Page sections */
-    .page-section {
-      display: none;
-    }
-
-    .page-section.active {
-      display: block;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-        transform: translateY(10px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .animate-fade-in {
-      animation: fadeIn 0.5s ease-out forwards;
-    }
-
-    .animate-delay-100 {
-      animation-delay: 100ms;
-    }
-
-    .animate-delay-200 {
-      animation-delay: 200ms;
-    }
-
-    .animate-delay-300 {
-      animation-delay: 300ms;
-    }
-
-    .animate-delay-400 {
-      animation-delay: 400ms;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-50 min-h-screen">
   <!-- Navbar -->
@@ -125,7 +14,7 @@
     <div class="container mx-auto px-4 py-4">
       <div class="flex justify-between items-center">
         <div class="text-2xl font-bold text-gray-800">
-          <a href="#" onclick="showPage('home'); return false;">EMG</a>
+          <a href="index.html">EMG</a>
         </div>
         
         <!-- Mobile menu button -->
@@ -137,146 +26,80 @@
         
         <!-- Desktop menu -->
         <div class="hidden md:flex space-x-8">
-          <a href="#" onclick="showPage('home'); return false;" class="nav-link" id="home-link">Home</a>
-          <a href="#" onclick="showPage('profile'); return false;" class="nav-link" id="profile-link">Profile</a>
-          <a href="#" onclick="showPage('hobbies'); return false;" class="nav-link" id="hobbies-link">Hobbies</a>
-          <a href="#" onclick="showPage('contact'); return false;" class="nav-link" id="contact-link">Contact</a>
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="profile.html" class="nav-link">Profile</a>
+          <a href="hobbies.html" class="nav-link">Hobbies</a>
+          <a href="contact.html" class="nav-link">Contact</a>
         </div>
       </div>
       
       <!-- Mobile menu -->
       <div id="mobileMenu" class="md:hidden hidden pt-4 pb-2">
         <div class="flex flex-col space-y-4">
-          <a href="#" onclick="showPage('home'); return false;" class="nav-link" id="mobile-home-link">Home</a>
-          <a href="#" onclick="showPage('profile'); return false;" class="nav-link" id="mobile-profile-link">Profile</a>
-          <a href="#" onclick="showPage('hobbies'); return false;" class="nav-link" id="mobile-hobbies-link">Hobbies</a>
-          <a href="#" onclick="showPage('contact'); return false;" class="nav-link" id="mobile-contact-link">Contact</a>
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="profile.html" class="nav-link">Profile</a>
+          <a href="hobbies.html" class="nav-link">Hobbies</a>
+          <a href="contact.html" class="nav-link">Contact</a>
         </div>
       </div>
     </div>
   </nav>
 
-  <!-- Main Content -->
+  <!-- Main Content - Home Page -->
   <main class="pt-16">
-    <!-- Home Page -->
-    <section id="home" class="page-section active">
-      <div class="relative min-h-screen">
-        <!-- Background pattern -->
-        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-white z-0"></div>
-        
-        <div class="container mx-auto px-4 py-12 md:py-20 relative z-10">
-          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
-            <!-- Profile image - takes 4 columns on desktop -->
-            <div class="md:col-span-4 flex justify-center md:justify-end order-2 md:order-1">
-              <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-lg opacity-0 animate-fade-in" style="animation-delay: 300ms; animation-fill-mode: forwards;">
-                <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80" 
-                  alt="Eril Casey M. Guevarra" 
-                  class="w-full h-full object-cover"
-                />
-              </div>
+    <div class="relative min-h-screen">
+      <!-- Background pattern -->
+      <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-white z-0"></div>
+      
+      <div class="container mx-auto px-4 py-12 md:py-20 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          <!-- Profile image - takes 4 columns on desktop -->
+          <div class="md:col-span-4 flex justify-center md:justify-end order-2 md:order-1">
+            <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-lg opacity-0 animate-fade-in" style="animation-delay: 300ms; animation-fill-mode: forwards;">
+              <img 
+                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80" 
+                alt="Eril Casey M. Guevarra" 
+                class="w-full h-full object-cover"
+              />
             </div>
+          </div>
+          
+          <!-- Text content - takes 8 columns on desktop -->
+          <div class="md:col-span-8 text-center md:text-left order-1 md:order-2">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 opacity-0 animate-fade-in" style="animation-fill-mode: forwards;">
+              Eril Casey M. Guevarra
+            </h1>
             
-            <!-- Text content - takes 8 columns on desktop -->
-            <div class="md:col-span-8 text-center md:text-left order-1 md:order-2">
-              <h1 class="text-4xl md:text-5xl font-bold text-gray-800 opacity-0 animate-fade-in" style="animation-fill-mode: forwards;">
-                Eril Casey M. Guevarra
-              </h1>
-              
-              <div class="h-1 w-20 bg-blue-500 my-4 mx-auto md:mx-0 opacity-0 animate-fade-in" style="animation-delay: 100ms; animation-fill-mode: forwards;"></div>
-              
-              <h2 class="text-xl md:text-2xl text-gray-700 mb-4 opacity-0 animate-fade-in" style="animation-delay: 200ms; animation-fill-mode: forwards;">
-                San Beda College Alabang | 10-ICT-B
-              </h2>
-              
-              <p class="text-gray-600 mb-8 max-w-2xl mx-auto md:mx-0 opacity-0 animate-fade-in" style="animation-delay: 300ms; animation-fill-mode: forwards;">
-                I'm a student at San Beda College Alabang, currently in 10-ICT-B. Passionate about technology and always eager to learn, I enjoy exploring new ideas, working on creative projects, and honing my skills in ICT.
-              </p>
-              
-              <div class="flex space-x-4 justify-center md:justify-start opacity-0 animate-fade-in" style="animation-delay: 400ms; animation-fill-mode: forwards;">
-                <div class="social-links flex space-x-3">
-                  <a href="#" aria-label="Twitter" class="social-icon">
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a href="#" aria-label="GitHub" class="social-icon">
-                    <i class="fab fa-github"></i>
-                  </a>
-                  <a href="#" aria-label="LinkedIn" class="social-icon">
-                    <i class="fab fa-linkedin"></i>
-                  </a>
-                  <a href="#" aria-label="Email" class="social-icon">
-                    <i class="fas fa-envelope"></i>
-                  </a>
-                </div>
+            <div class="h-1 w-20 bg-blue-500 my-4 mx-auto md:mx-0 opacity-0 animate-fade-in" style="animation-delay: 100ms; animation-fill-mode: forwards;"></div>
+            
+            <h2 class="text-xl md:text-2xl text-gray-700 mb-4 opacity-0 animate-fade-in" style="animation-delay: 200ms; animation-fill-mode: forwards;">
+              San Beda College Alabang | 10-ICT-B
+            </h2>
+            
+            <p class="text-gray-600 mb-8 max-w-2xl mx-auto md:mx-0 opacity-0 animate-fade-in" style="animation-delay: 300ms; animation-fill-mode: forwards;">
+              I'm a student at San Beda College Alabang, currently in 10-ICT-B. Passionate about technology and always eager to learn, I enjoy exploring new ideas, working on creative projects, and honing my skills in ICT.
+            </p>
+            
+            <div class="flex space-x-4 justify-center md:justify-start opacity-0 animate-fade-in" style="animation-delay: 400ms; animation-fill-mode: forwards;">
+              <div class="social-links flex space-x-3">
+                <a href="#" aria-label="Twitter" class="social-icon">
+                  <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" aria-label="GitHub" class="social-icon">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="#" aria-label="LinkedIn" class="social-icon">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="#" aria-label="Email" class="social-icon">
+                  <i class="fas fa-envelope"></i>
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Profile Page -->
-    <section id="profile" class="page-section">
-      <div class="container mx-auto px-4 py-12">
-        <div class="max-w-4xl mx-auto">
-          <div class="section-title text-center md:text-left">
-            <h2>Profile</h2>
-          </div>
-          
-          <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
-            <p class="text-gray-600 mb-4">
-              This is the Profile page. You can add your personal information, education details, 
-              skills, and other relevant information about yourself here.
-            </p>
-            <div class="h-64 flex items-center justify-center bg-gray-100 rounded-md">
-              <p class="text-gray-500">Profile content coming soon...</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Hobbies Page -->
-    <section id="hobbies" class="page-section">
-      <div class="container mx-auto px-4 py-12">
-        <div class="max-w-4xl mx-auto">
-          <div class="section-title text-center md:text-left">
-            <h2>Hobbies</h2>
-          </div>
-          
-          <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
-            <p class="text-gray-600 mb-4">
-              This is the Hobbies page. You can showcase your interests, activities, 
-              and things you enjoy doing in your free time here.
-            </p>
-            <div class="h-64 flex items-center justify-center bg-gray-100 rounded-md">
-              <p class="text-gray-500">Hobbies content coming soon...</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Page -->
-    <section id="contact" class="page-section">
-      <div class="container mx-auto px-4 py-12">
-        <div class="max-w-4xl mx-auto">
-          <div class="section-title text-center md:text-left">
-            <h2>Contact</h2>
-          </div>
-          
-          <div class="bg-white rounded-lg shadow-md p-6 md:p-8">
-            <p class="text-gray-600 mb-4">
-              This is the Contact page. You can add your contact information, social media links, 
-              or a contact form here for visitors to reach out to you.
-            </p>
-            <div class="h-64 flex items-center justify-center bg-gray-100 rounded-md">
-              <p class="text-gray-500">Contact content coming soon...</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    </div>
   </main>
 
   <script>
@@ -290,42 +113,6 @@
       } else {
         mobileMenu.classList.add('hidden');
         this.innerHTML = '<i class="fas fa-bars text-xl"></i>';
-      }
-    });
-
-    // Page navigation
-    function showPage(pageId) {
-      // Hide all pages
-      document.querySelectorAll('.page-section').forEach(page => {
-        page.classList.remove('active');
-      });
-      
-      // Show selected page
-      document.getElementById(pageId).classList.add('active');
-      
-      // Update active link styling
-      document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.remove('active');
-      });
-      
-      document.getElementById(pageId + '-link').classList.add('active');
-      document.getElementById('mobile-' + pageId + '-link').classList.add('active');
-      
-      // Close mobile menu if it's open
-      const mobileMenu = document.getElementById('mobileMenu');
-      if (!mobileMenu.classList.contains('hidden')) {
-        mobileMenu.classList.add('hidden');
-        document.getElementById('menuToggle').innerHTML = '<i class="fas fa-bars text-xl"></i>';
-      }
-    }
-
-    // Load the current page from URL hash if present
-    window.addEventListener('load', function() {
-      const hash = window.location.hash.substring(1);
-      if (hash && ['home', 'profile', 'hobbies', 'contact'].includes(hash)) {
-        showPage(hash);
-      } else {
-        showPage('home');
       }
     });
   </script>
