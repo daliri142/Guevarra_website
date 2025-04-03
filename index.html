@@ -11,6 +11,7 @@
       --background: #f8fafc;
       --foreground: #1e293b;
       --muted-foreground: #64748b;
+      --border: #e2e8f0;
     }
     
     * {
@@ -25,8 +26,10 @@
       font-family: 'Inter', sans-serif;
       background-color: var(--background);
       color: var(--foreground);
+      line-height: 1.6;
     }
     
+    /* Hero Section Styles */
     .hero-background {
       background-image: 
         radial-gradient(circle at 30% 20%, rgba(184, 196, 211, 0.4) 0%, transparent 40%),
@@ -83,18 +86,44 @@
       animation: fadeIn 0.5s ease-out forwards;
     }
     
-    h1 {
-      font-size: 2.25rem;
+    h1, h2, h3 {
       font-weight: 700;
       line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    
+    h1 {
+      font-size: 2.25rem;
       margin-bottom: 1.5rem;
       animation: fadeIn 0.5s ease-out 0.1s forwards;
-      opacity: 0;
+    }
+    
+    h2 {
+      font-size: 1.875rem;
+      color: var(--foreground);
+      margin-top: 2rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary);
+      display: inline-block;
+    }
+    
+    h3 {
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-top: 1.5rem;
     }
     
     @media (min-width: 768px) {
       h1 {
         font-size: 3rem;
+      }
+      
+      h2 {
+        font-size: 2.25rem;
+      }
+      
+      h3 {
+        font-size: 1.5rem;
       }
     }
     
@@ -104,7 +133,7 @@
       }
     }
     
-    h1 span {
+    h1 span, h2 span, h3 span {
       color: var(--primary);
     }
     
@@ -115,7 +144,6 @@
       margin-bottom: 2rem;
       line-height: 1.6;
       animation: fadeIn 0.5s ease-out 0.3s forwards;
-      opacity: 0;
     }
     
     @media (min-width: 1024px) {
@@ -126,22 +154,17 @@
     }
     
     .buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  animation: fadeIn 0.5s ease-out 0.4s forwards;
-  opacity: 0;
-  animation-fill-mode: forwards; 
-}
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      animation: fadeIn 0.5s ease-out 0.4s forwards;
+    }
     
     @media (min-width: 1024px) {
       .buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
+        justify-content: flex-start;
+      }
     }
     
     .btn-primary {
@@ -181,7 +204,6 @@
       display: flex;
       justify-content: center;
       animation: fadeIn 0.5s ease-out 0.3s forwards;
-      opacity: 0;
     }
     
     @media (min-width: 1024px) {
@@ -212,6 +234,7 @@
       object-fit: cover;
     }
     
+    /* Header Styles */
     .header {
       position: fixed;
       top: 0;
@@ -244,7 +267,6 @@
       color: var(--foreground);
       text-decoration: none;
       animation: fadeIn 0.5s ease-out 0.1s forwards;
-      opacity: 0;
     }
     
     .logo span {
@@ -267,7 +289,6 @@
       text-decoration: none;
       color: var(--foreground);
       animation: fadeIn 0.5s ease-out;
-      opacity: 0;
     }
     
     .nav-item:hover {
@@ -280,22 +301,274 @@
       color: var(--primary);
     }
     
-    .nav-item:nth-child(1) {
-      animation-delay: 0.2s;
+    /* Profile Section Styles */
+    .section {
+      padding: 5rem 1.5rem;
     }
     
-    .nav-item:nth-child(2) {
-      animation-delay: 0.3s;
+    .section-container {
+      max-width: 72rem;
+      margin: 0 auto;
     }
     
-    .nav-item:nth-child(3) {
-      animation-delay: 0.4s;
+    .section-heading {
+      text-align: center;
+      margin-bottom: 3rem;
     }
     
-    .nav-item:nth-child(4) {
-      animation-delay: 0.5s;
+    .section-content {
+      margin-top: 2rem;
     }
     
+    .profile-section {
+      background-color: white;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 1rem;
+      padding: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    
+    .skill-card {
+      background-color: #f8fafc;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s;
+    }
+    
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .skill-name {
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+    
+    .skill-level {
+      height: 0.5rem;
+      background-color: #e2e8f0;
+      border-radius: 1rem;
+      margin-top: 0.5rem;
+      overflow: hidden;
+    }
+    
+    .skill-level-fill {
+      height: 100%;
+      background-color: var(--primary);
+      border-radius: 1rem;
+    }
+    
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 1rem;
+      height: 100%;
+      width: 2px;
+      background-color: #e2e8f0;
+    }
+    
+    @media (min-width: 768px) {
+      .timeline::before {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    
+    .timeline-item {
+      position: relative;
+      padding-left: 3rem;
+      margin-bottom: 2.5rem;
+    }
+    
+    @media (min-width: 768px) {
+      .timeline-item {
+        width: 50%;
+        padding-left: 0;
+        padding-right: 2.5rem;
+      }
+      
+      .timeline-item:nth-child(even) {
+        margin-left: auto;
+        padding-left: 2.5rem;
+        padding-right: 0;
+      }
+    }
+    
+    .timeline-dot {
+      position: absolute;
+      top: 0;
+      left: 0.7rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: var(--primary);
+      border-radius: 50%;
+      border: 3px solid white;
+      z-index: 1;
+    }
+    
+    @media (min-width: 768px) {
+      .timeline-dot {
+        left: auto;
+        right: -0.75rem;
+      }
+      
+      .timeline-item:nth-child(even) .timeline-dot {
+        right: auto;
+        left: -0.75rem;
+      }
+    }
+    
+    .timeline-content {
+      background-color: white;
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .timeline-date {
+      color: var(--primary);
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    @media (min-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    
+    .contact-form {
+      padding: 2rem;
+      background-color: white;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+    
+    input, textarea {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #e2e8f0;
+      font-family: 'Inter', sans-serif;
+      transition: all 0.3s;
+    }
+    
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    }
+    
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    
+    /* Contact Info */
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .contact-icon {
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(59, 130, 246, 0.1);
+      color: var(--primary);
+      border-radius: 50%;
+      font-size: 1.25rem;
+    }
+    
+    /* Footer */
+    .footer {
+      background-color: #1e293b;
+      color: white;
+      padding: 3rem 1.5rem;
+    }
+    
+    .footer-container {
+      max-width: 72rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    
+    .social-link {
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: white;
+      border-radius: 50%;
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+    
+    .social-link:hover {
+      background-color: var(--primary);
+      transform: translateY(-3px);
+    }
+    
+    .copyright {
+      margin-top: 1.5rem;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.875rem;
+    }
+    
+    /* Animations */
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -343,25 +616,26 @@
     <div class="header-container">
       <a href="#" class="logo"><span>E</span>ril</a>
       <nav class="nav">
-        <a href="#" class="nav-item active">Home</a>
-        <a href="#" class="nav-item">Profile</a>
-        <a href="#" class="nav-item">Hobbies</a>
-        <a href="#" class="nav-item">About</a>
+        <a href="#home" class="nav-item active">Home</a>
+        <a href="#profile" class="nav-item">Profile</a>
+        <a href="#skills" class="nav-item">Skills</a>
+        <a href="#experience" class="nav-item">Experience</a>
+        <a href="#education" class="nav-item">Education</a>
       </nav>
     </div>
   </header>
 
-  <section class="hero-background">
+  <section id="home" class="hero-background">
     <div class="container">
       <div class="content">
         <div class="badge">Welcome to my portfolio</div>
         <h1>Hi, I'm <span>Eril Casey M. Guevarra</span></h1>
         <p class="description">
-          I'm a student at San Beda College Alabang, currently in 10-ICT-B. Passionate about technology and always eager to learn, I enjoy exploring new ideas, working on creative projects, and honing my skills in ICT.
+          Passionate about technology and always eager to learn, I enjoy exploring new ideas, working on creative projects, and honing my skills in ICT.
         </p>
         <div class="buttons">
-          <a href="#" class="btn-primary">Download CV</a>
-          <a href="#" class="btn-secondary">Contact Me</a>
+          <a href="#profile" class="btn-primary">View Profile</a>
+          <a href="#contact" class="btn-secondary">Contact Me</a>
         </div>
       </div>
       <div class="image-container">
@@ -372,8 +646,210 @@
     </div>
   </section>
 
+  <section id="profile" class="section">
+    <div class="section-container">
+      <div class="section-heading">
+        <h2>About <span>Me</span></h2>
+      </div>
+      <div class="profile-section">
+        <p>
+          Hello! I'm Eril Casey M. Guevarra, a passionate technology enthusiast with a keen interest in Information and Communications Technology (ICT). I thrive on learning new skills and exploring creative solutions to complex problems.
+        </p>
+        <p class="mt-4">
+          My journey in the tech world began with a curiosity about how digital systems work, which eventually grew into a passion for creating and innovating. I am constantly seeking opportunities to expand my knowledge and develop my technical abilities.
+        </p>
+        <p class="mt-4">
+          When I'm not coding or exploring new technologies, you might find me engaging in various activities like reading, playing sports, or participating in community service. I believe in the power of technology to transform lives and am excited to be part of this ever-evolving field.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section" style="background-color: #f8fafc;">
+    <div class="section-container">
+      <div class="section-heading">
+        <h2>My <span>Skills</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-name">HTML/CSS</div>
+          <p>Proficient in creating responsive and accessible web designs</p>
+          <div class="skill-level">
+            <div class="skill-level-fill" style="width: 90%;"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-name">JavaScript</div>
+          <p>Experience with modern JS frameworks and vanilla JavaScript</p>
+          <div class="skill-level">
+            <div class="skill-level-fill" style="width: 85%;"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-name">Python</div>
+          <p>Familiar with Python for data analysis and automation</p>
+          <div class="skill-level">
+            <div class="skill-level-fill" style="width: 80%;"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-name">Graphic Design</div>
+          <p>Creating visual content using industry-standard tools</p>
+          <div class="skill-level">
+            <div class="skill-level-fill" style="width: 75%;"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-name">Problem Solving</div>
+          <p>Analytical thinking and creative problem solving</p>
+          <div class="skill-level">
+            <div class="skill-level-fill" style="width: 95%;"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <div class="skill-name">Communication</div>
+          <p>Effective written and verbal communication skills</p>
+          <div class="skill-level">
+            <div class="skill-level-fill" style="width: 90%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience" class="section">
+    <div class="section-container">
+      <div class="section-heading">
+        <h2>My <span>Experience</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2023 - Present</div>
+            <h3>Student Tech Committee Lead</h3>
+            <p>Leading technology initiatives at school, organizing tech events, and mentoring fellow students in various technology projects.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2022 - 2023</div>
+            <h3>Web Development Intern</h3>
+            <p>Assisted in developing and maintaining websites, learned modern web development practices, and contributed to team projects.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2021 - 2022</div>
+            <h3>Digital Media Volunteer</h3>
+            <p>Created digital content for community organizations, designed graphics, and managed social media accounts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="section" style="background-color: #f8fafc;">
+    <div class="section-container">
+      <div class="section-heading">
+        <h2>My <span>Education</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2020 - Present</div>
+            <h3>High School</h3>
+            <p>Currently focusing on Information and Communications Technology (ICT) track. Participating in various tech competitions and clubs.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2018 - 2020</div>
+            <h3>Junior High School</h3>
+            <p>Began exploring technology and computer science. Participated in science and math competitions.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2012 - 2018</div>
+            <h3>Elementary School</h3>
+            <p>Developed foundation in core subjects and discovered an early interest in technology and science.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="section-container">
+      <div class="section-heading">
+        <h2>Contact <span>Me</span></h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-form">
+          <form>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Send Message</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div>
+              <h3>Email</h3>
+              <p>erilcasey@example.com</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div>
+              <h3>Phone</h3>
+              <p>+1 (123) 456-7890</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h3>Location</h3>
+              <p>Manila, Philippines</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <a href="#" class="logo" style="color: white;"><span>E</span>ril</a>
+      <div class="social-links">
+        <a href="#" class="social-link">FB</a>
+        <a href="#" class="social-link">TW</a>
+        <a href="#" class="social-link">IG</a>
+        <a href="#" class="social-link">LI</a>
+      </div>
+      <p>Passionate about technology and always eager to learn.</p>
+      <p class="copyright">© 2023 Eril Casey M. Guevarra. All rights reserved.</p>
+    </div>
+  </footer>
+
   <script>
-    // Handle the header scrolling effect
     const header = document.getElementById('header');
     window.addEventListener('scroll', () => {
       if (window.scrollY > 50) {
@@ -381,6 +857,53 @@
       } else {
         header.classList.remove('scrolled');
       }
+    });
+    
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+          
+          // Update active link
+          document.querySelectorAll('.nav-item').forEach(navItem => {
+            navItem.classList.remove('active');
+          });
+          this.classList.add('active');
+        }
+      });
+    });
+    
+    // Update active link on scroll
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section');
+      const navItems = document.querySelectorAll('.nav-item');
+      
+      let currentSection = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionHeight = section.clientHeight;
+        
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+      
+      navItems.forEach(navItem => {
+        navItem.classList.remove('active');
+        if (navItem.getAttribute('href') === `#${currentSection}`) {
+          navItem.classList.add('active');
+        }
+      });
     });
   </script>
 </body>
